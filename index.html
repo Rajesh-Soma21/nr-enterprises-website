@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NR Enterprises & Solutions | Premier Industrial Printing — Bangalore</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><polygon points='0,0 54,0 64,10 64,64 10,64 0,54' fill='%23f05a28'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='28' fill='white'>NR</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+[data-theme="light"]{
+  --bg:#ffffff; --bg2:#f4f7fc; --bg3:#eaf0f8;
+  --card:#ffffff; --text:#1e2d40; --muted:#5c7080;
+  --border:#d0dcea; --nav-stuck-bg:rgba(255,255,255,0.97);
+  --stat-bg:#1a2e4d; --svc-bg:#1a2e4d; --ind-bg:#1a2e4d;
+  --foot-bg:#0b1525; --hero-bg:#0d1929;
+  --toggle-bg:rgba(255,255,255,0.15);
+}
+[data-theme="dark"]{
+  --bg:#0d1929; --bg2:#111f30; --bg3:#162436;
+  --card:#162436; --text:#d8e8f8; --muted:#7a9ab8;
+  --border:#243d63; --nav-stuck-bg:rgba(13,25,41,0.97);
+  --stat-bg:#111f30; --svc-bg:#090f1c; --ind-bg:#090f1c;
+  --foot-bg:#060d18; --hero-bg:#060d18;
+  --toggle-bg:rgba(255,255,255,0.1);
+}
+:root{ --orange:#f05a28; --orange2:#c94618; --navy:#1a2e4d; --navy2:#243d63; }
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--orange);border-radius:4px}
+
+/* HEADER */
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 6%;position:fixed;width:100%;top:0;z-index:1000;transition:all .35s}
+header.stuck{background:var(--nav-stuck-bg);padding:13px 6%;box-shadow:0 4px 30px rgba(0,0,0,.15);backdrop-filter:blur(14px)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:42px;height:42px;background:var(--orange);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';color:#fff;font-size:1.3rem;clip-path:polygon(0 0,84% 0,100% 16%,100% 100%,16% 100%,0 84%);flex-shrink:0}
+.logo-name{font-family:'Barlow Condensed';font-weight:800;font-size:1.2rem;color:#fff;letter-spacing:1px;line-height:1.1;transition:color .3s}
+.logo-name small{display:block;font-size:.56rem;color:var(--orange);letter-spacing:3px;font-weight:600}
+header.stuck .logo-name{color:var(--text)}
+nav ul{display:flex;list-style:none;align-items:center;gap:28px}
+nav a{color:rgba(255,255,255,.85);font-weight:600;text-decoration:none;font-size:.76rem;letter-spacing:1.5px;text-transform:uppercase;transition:.25s;position:relative}
+nav a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:2px;background:var(--orange);transition:.25s}
+nav a:hover{color:var(--orange)!important}
+nav a:hover::after{width:100%}
+header.stuck nav a{color:var(--text)}
+.nav-cta{background:var(--orange)!important;color:#fff!important;padding:8px 18px;border-radius:3px;font-weight:800!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--orange2)!important;transform:translateY(-2px)}
+.hdr-right{display:flex;align-items:center;gap:16px}
+.theme-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:var(--toggle-bg);color:#fff;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:.3s;flex-shrink:0}
+header.stuck .theme-btn{border-color:var(--border);color:var(--text)}
+.theme-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff;transform:scale(1.1)}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--hero-bg);position:relative;overflow:hidden;display:flex;align-items:center}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(240,90,40,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(240,90,40,.05) 1px,transparent 1px);background-size:55px 55px}
+.hero-glow{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(240,90,40,.15) 0%,transparent 68%);pointer-events:none}
+.hero-bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,transparent,var(--orange) 35%,var(--orange) 65%,transparent)}
+.hero-inner{padding:120px 6% 60px;width:100%;position:relative;z-index:2;display:grid;grid-template-columns:1fr 400px;gap:65px;align-items:center}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(240,90,40,.13);border:1px solid rgba(240,90,40,.35);padding:7px 16px;border-radius:2px;margin-bottom:24px}
+.hero-tag span{color:var(--orange);font-size:.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font-family:'Bebas Neue';font-size:clamp(3.2rem,7vw,6.2rem);line-height:.92;color:#fff;margin-bottom:22px;letter-spacing:2px}
+.hero h1 .acc{color:var(--orange)}
+.hero h1 .out{-webkit-text-stroke:2px rgba(255,255,255,.32);color:transparent}
+.hero-p{font-size:.98rem;color:rgba(255,255,255,.58);max-width:490px;margin-bottom:34px;font-weight:300;line-height:1.85}
+.hero-p strong{color:rgba(255,255,255,.88);font-weight:600}
+.hero-btns{display:flex;gap:13px;flex-wrap:wrap}
+.btn-fill{background:var(--orange);color:#fff;padding:14px 32px;font-family:'Barlow Condensed';font-weight:700;font-size:.92rem;letter-spacing:2px;text-decoration:none;text-transform:uppercase;border-radius:3px;display:inline-flex;align-items:center;gap:9px;transition:.3s;border:none;cursor:pointer}
+.btn-fill:hover{background:var(--orange2);transform:translateY(-3px);box-shadow:0 12px 26px rgba(240,90,40,.35)}
+.btn-line{background:transparent;color:#fff;padding:13px 30px;border:1px solid rgba(255,255,255,.27);font-family:'Barlow Condensed';font-weight:600;font-size:.92rem;letter-spacing:2px;text-decoration:none;text-transform:uppercase;border-radius:3px;display:inline-flex;align-items:center;gap:9px;transition:.3s}
+.btn-line:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-3px)}
+.hero-stats{display:flex;gap:26px;margin-top:36px;padding-top:30px;border-top:1px solid rgba(255,255,255,.1)}
+.hs strong{display:block;font-family:'Bebas Neue';font-size:1.9rem;color:var(--orange);line-height:1}
+.hs span{font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase}
+.hcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(18px);border-radius:8px;padding:30px}
+.hcard h3{font-family:'Barlow Condensed';font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:1px;margin-bottom:18px;text-transform:uppercase}
+.hcard form{display:flex;flex-direction:column;gap:10px}
+.hf-in{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:#fff;padding:10px 13px;border-radius:4px;font-family:'Barlow';font-size:.86rem;outline:none;transition:.25s;width:100%}
+.hf-in::placeholder{color:rgba(255,255,255,.35)}
+.hf-in:focus{border-color:var(--orange);background:rgba(240,90,40,.09)}
+.hf-sel{background:rgba(20,35,60,.9);border:1px solid rgba(255,255,255,.12);color:#fff;padding:10px 13px;border-radius:4px;font-family:'Barlow';font-size:.86rem;outline:none;width:100%}
+.wa-go{background:#25d366;color:#fff;border:none;padding:12px;border-radius:4px;font-family:'Barlow Condensed';font-size:.9rem;font-weight:700;letter-spacing:1px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;transition:.3s;text-transform:uppercase;width:100%}
+.wa-go:hover{background:#1da952;transform:translateY(-2px);box-shadow:0 7px 18px rgba(37,211,102,.3)}
+
+/* MARQUEE */
+.marquee-band{background:var(--orange);padding:14px 0;overflow:hidden}
+.mq-track{display:flex;width:200%;animation:mqScroll 30s linear infinite}
+.mq-item{display:flex;align-items:center;gap:16px;padding:0 24px;font-family:'Barlow Condensed';font-size:.92rem;font-weight:700;color:#fff;letter-spacing:2px;text-transform:uppercase;white-space:nowrap}
+.mq-item i{font-size:.68rem;opacity:.6}
+@keyframes mqScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* STATS */
+.stats-row{background:var(--stat-bg);display:grid;grid-template-columns:repeat(4,1fr)}
+.sb{padding:44px 22px;border-right:1px solid rgba(255,255,255,.08);text-align:center;position:relative;transition:.3s}
+.sb:last-child{border-right:none}
+.sb::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:3px;background:var(--orange);transition:.4s}
+.sb:hover::after{width:55%}
+.sb-num{font-family:'Bebas Neue';font-size:3rem;color:var(--orange);line-height:1;display:block}
+.sb-label{font-size:.66rem;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.42);margin-top:5px}
+.sb-sub{font-size:.76rem;color:rgba(255,255,255,.55);margin-top:3px;font-weight:300}
+
+/* SECTIONS */
+section{padding:90px 6%}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:13px}
+.eyebrow::before{content:'';width:24px;height:2px;background:var(--orange)}
+.eyebrow span{font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--orange)}
+h2.sh{font-family:'Bebas Neue';font-size:clamp(2rem,4vw,3.2rem);color:var(--text);line-height:1;letter-spacing:1px;margin-bottom:13px}
+h2.sh .acc{color:var(--orange)}
+.sub{font-size:.94rem;color:var(--muted);max-width:560px;font-weight:300;line-height:1.85}
+.ctr{text-align:center}
+.ctr .sub{margin:0 auto}
+.ctr .eyebrow{justify-content:center}
+
+/* ABOUT */
+.about-s{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-vis{position:relative;padding-bottom:40px}
+/* Main visual — printing press CSS illustration */
+.press-box{border-radius:8px;overflow:hidden;box-shadow:16px 16px 0 var(--bg3),18px 18px 0 var(--orange);position:relative;height:340px;background:linear-gradient(145deg,#0d1929,#1a2e4d)}
+.press-box::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(255,255,255,.03) 28px,rgba(255,255,255,.03) 30px),repeating-linear-gradient(90deg,transparent,transparent 28px,rgba(255,255,255,.03) 28px,rgba(255,255,255,.03) 30px)}
+.press-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.press-icon-big{font-size:4rem;color:var(--orange);opacity:.8}
+.press-bars{display:flex;gap:7px;align-items:flex-end}
+.pb{border-radius:3px 3px 0 0;animation:pbAnim 1.4s ease-in-out infinite alternate}
+.pb1{width:28px;height:38px;background:var(--orange);animation-delay:0s}
+.pb2{width:28px;height:56px;background:#f8a07a;animation-delay:.18s}
+.pb3{width:28px;height:28px;background:var(--orange);animation-delay:.36s}
+.pb4{width:28px;height:64px;background:#f8a07a;animation-delay:.09s}
+.pb5{width:28px;height:44px;background:var(--orange);animation-delay:.27s}
+@keyframes pbAnim{from{transform:scaleY(.6)}to{transform:scaleY(1)}}
+.press-lbl{font-family:'Bebas Neue';font-size:1.1rem;color:rgba(255,255,255,.55);letter-spacing:3px}
+/* Badge */
+.about-badge{position:absolute;bottom:0;right:-5px;background:var(--orange);color:#fff;padding:20px 24px;border-radius:4px;text-align:center;box-shadow:0 10px 26px rgba(240,90,40,.4);z-index:2}
+.about-badge strong{display:block;font-family:'Bebas Neue';font-size:2.6rem;line-height:1}
+.about-badge small{font-size:.6rem;letter-spacing:2px;text-transform:uppercase;opacity:.88}
+/* CMYK inset */
+.cmyk-box{position:absolute;bottom:-5px;left:-15px;width:48%;border-radius:5px;border:4px solid var(--bg);box-shadow:0 8px 22px rgba(0,0,0,.18);z-index:2;overflow:hidden}
+.cmyk-strips{display:flex;height:90px}
+.cs{flex:1;display:flex;align-items:flex-end;justify-content:center;padding-bottom:8px;font-family:'Bebas Neue';font-size:1rem;font-weight:700;color:rgba(255,255,255,.85)}
+.cs-c{background:#00b4d8}.cs-m{background:#e63980}.cs-y{background:#f7c900}.cs-k{background:#1a1a1a}
+.cmyk-foot{text-align:center;padding:6px;background:var(--bg);font-family:'Barlow Condensed';font-size:.7rem;font-weight:700;color:var(--text);letter-spacing:2px;text-transform:uppercase}
+
+.about-text p{color:var(--muted);font-size:.92rem;line-height:1.9;margin-bottom:16px}
+.about-text p strong{color:var(--text);font-weight:600}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.pill{background:var(--bg2);padding:16px;border-radius:5px;border-left:3px solid var(--orange)}
+.pill h4{font-family:'Barlow Condensed';font-weight:700;color:var(--text);font-size:.92rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.pill p{font-size:.78rem;color:var(--muted);line-height:1.6}
+
+/* SERVICES */
+.svc-s{background:var(--svc-bg)}
+.svc-s h2.sh{color:#fff}
+.svc-s .sub{color:rgba(255,255,255,.46)}
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:46px;flex-wrap:wrap;gap:16px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.svc-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:34px 28px;position:relative;overflow:hidden;transition:.35s}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--orange);transition:.35s}
+.svc-card:hover{background:rgba(240,90,40,.07);border-color:rgba(240,90,40,.22);transform:translateY(-4px)}
+.svc-card:hover::before{height:100%}
+.svc-n{font-family:'Bebas Neue';font-size:2.8rem;color:rgba(255,255,255,.04);position:absolute;top:8px;right:16px;line-height:1}
+.svc-ico{width:48px;height:48px;border-radius:4px;background:rgba(240,90,40,.14);border:1px solid rgba(240,90,40,.2);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transition:.3s}
+.svc-card:hover .svc-ico{background:var(--orange);border-color:var(--orange)}
+.svc-ico i{color:var(--orange);font-size:1.15rem;transition:.3s}
+.svc-card:hover .svc-ico i{color:#fff}
+.svc-title{font-family:'Barlow Condensed';font-weight:700;font-size:1.1rem;color:#fff;letter-spacing:.5px;margin-bottom:9px;text-transform:uppercase}
+.svc-desc{font-size:.78rem;color:rgba(255,255,255,.36);line-height:1.7;margin-bottom:14px}
+.svc-list{list-style:none}
+.svc-list li{font-size:.76rem;color:rgba(255,255,255,.52);padding:4px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:7px}
+.svc-list li:last-child{border-bottom:none}
+.svc-list li::before{content:'→';color:var(--orange);font-size:.7rem}
+
+/* SHOWCASE */
+.showcase-s{background:var(--bg2)}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}
+.pc{position:relative;border-radius:8px;overflow:hidden}
+.pc-inner{width:100%;height:100%;transition:transform .45s}
+.pc:hover .pc-inner{transform:scale(1.05)}
+.pc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,20,36,.92) 0%,rgba(10,20,36,.08) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:16px;z-index:2}
+.pc-title{font-family:'Barlow Condensed';font-weight:700;font-size:.9rem;color:#fff;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:6px}
+.pc-title i{color:var(--orange)}
+.pc-sub{font-size:.71rem;color:rgba(255,255,255,.6);margin-top:3px;line-height:1.45}
+.pc-big{grid-column:span 2;grid-row:span 2;height:430px}
+.pc-med{height:200px}
+.pc-wide{grid-column:span 2;height:200px}
+.pc-tall{grid-row:span 2;height:414px}
+
+/* CSS Product Visuals */
+.vis-press{background:linear-gradient(145deg,#0b1520,#1a2e4d);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;height:100%;position:relative}
+.vis-press::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 18px,rgba(240,90,40,.06) 18px,rgba(240,90,40,.06) 20px)}
+.gear-anim{font-size:5.5rem;color:var(--orange);opacity:.5;animation:gearSpin 8s linear infinite;position:relative;z-index:1}
+@keyframes gearSpin{to{transform:rotate(360deg)}}
+.press-bars2{display:flex;gap:7px;align-items:flex-end;position:relative;z-index:1}
+.pb2a{border-radius:3px 3px 0 0;animation:pbAnim 1.3s ease-in-out infinite alternate}
+
+.vis-broch{background:linear-gradient(135deg,#e8501a,#f07a28,#ffd6c0);display:flex;align-items:center;justify-content:center;gap:8px;height:100%}
+.bfold{width:46px;height:66px;background:#fff;border-radius:3px;box-shadow:3px 3px 8px rgba(0,0,0,.2);transform:perspective(200px) rotateY(-12deg)}
+.bfold2{background:#fff5f0;transform:perspective(200px) rotateY(6deg)}
+
+.vis-biz{background:linear-gradient(135deg,#1a2e4d,#243d63);display:flex;align-items:center;justify-content:center;height:100%}
+.biz-stack{position:relative;width:90px;height:70px}
+.biz{width:75px;height:44px;border-radius:4px;position:absolute;box-shadow:3px 3px 10px rgba(0,0,0,.3)}
+.biz-a{background:#243d63;top:0;left:14px;transform:rotate(8deg)}
+.biz-b{background:#fff;top:5px;left:8px;transform:rotate(-4deg)}
+.biz-c{background:linear-gradient(135deg,var(--orange),#c94618);top:10px;left:2px}
+.biz-c::after{content:'';position:absolute;bottom:8px;left:8px;right:8px;height:2px;background:rgba(255,255,255,.5);border-radius:1px}
+
+.vis-books{background:linear-gradient(180deg,#3a5a8f,#1a2e4d);display:flex;align-items:flex-end;justify-content:center;gap:4px;padding-bottom:18px;height:100%}
+.bk{border-radius:2px 2px 0 0;box-shadow:2px 0 4px rgba(0,0,0,.3)}
+
+.vis-cal{background:linear-gradient(135deg,#f0f5ff,#dde8f8);display:flex;align-items:center;justify-content:center;height:100%}
+.cal-card{width:85px;background:#fff;border-radius:7px;box-shadow:0 6px 20px rgba(0,0,0,.14);overflow:hidden}
+.cal-hdr{background:var(--orange);padding:8px;text-align:center;font-family:'Bebas Neue';font-size:.85rem;color:#fff;letter-spacing:1px}
+.cal-body{padding:6px;display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal-body span{font-size:.36rem;text-align:center;color:#334155;padding:1px}
+.cal-today{background:var(--orange);color:#fff;border-radius:50%;width:11px;height:11px;display:flex;align-items:center;justify-content:center;margin:auto;font-size:.32rem}
+
+.vis-cmyk{display:flex;height:100%}
+.cs2{flex:1;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;font-family:'Bebas Neue';font-size:1.1rem;color:rgba(255,255,255,.75)}
+
+.vis-flyer{background:linear-gradient(135deg,#ff6b35,#f7931e,#ffd700);display:flex;align-items:center;justify-content:center;gap:7px;height:100%}
+.fl{border-radius:3px;box-shadow:3px 3px 8px rgba(0,0,0,.22)}
+
+.vis-flex{background:linear-gradient(180deg,#090f1a,#1a2e4d);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;height:100%;position:relative}
+.flex-banner{width:82%;height:38px;border-radius:4px;background:linear-gradient(90deg,var(--orange),#f8a07a);position:relative;box-shadow:0 5px 16px rgba(240,90,40,.45);display:flex;align-items:center;justify-content:center}
+.flex-banner span{font-family:'Bebas Neue';font-size:.72rem;letter-spacing:2px;color:#fff}
+.flex-posts{display:flex;gap:18px;align-items:flex-start}
+.flex-post{width:12px;height:60px;background:#243d63;border-radius:2px;position:relative}
+.flex-post::before{content:'';position:absolute;top:5px;left:50%;transform:translateX(-50%);width:28px;height:36px;background:linear-gradient(135deg,var(--orange),#f8a07a);border-radius:2px}
+
+.vis-pack{background:linear-gradient(135deg,#c8956a,#8b5e3c);display:flex;align-items:center;justify-content:center;height:100%}
+.box-wrap{position:relative;width:95px;height:80px}
+.bx{width:52px;height:52px;border-radius:3px;box-shadow:4px 4px 10px rgba(0,0,0,.3);position:absolute}
+.bx::after{content:'';position:absolute;top:0;left:0;right:0;height:12px;background:rgba(255,255,255,.15);border-radius:3px 3px 0 0}
+.bx-a{background:var(--orange);top:20px;left:0;transform:rotate(-5deg)}
+.bx-b{background:#1a2e4d;top:0;left:28px;transform:rotate(6deg)}
+
+.vis-nb{background:linear-gradient(135deg,#e8f0fc,#c5d8f0);display:flex;align-items:center;justify-content:center;gap:5px;height:100%}
+.nb{width:58px;height:72px;border-radius:3px;position:relative;box-shadow:3px 3px 8px rgba(0,0,0,.18)}
+.nb-a{background:#fff}
+.nb-a::before{content:'';position:absolute;top:0;bottom:0;left:6px;width:3px;background:var(--orange);border-radius:0 2px 2px 0}
+.nb-a::after{content:'';position:absolute;top:12px;left:14px;right:8px;height:1px;background:#e0e0e0;box-shadow:0 10px 0 #e0e0e0,0 20px 0 #e0e0e0,0 30px 0 #e0e0e0,0 40px 0 #e0e0e0}
+.nb-b{background:var(--orange);transform:rotate(-8deg)}
+
+.showcase-cta{margin-top:20px;background:var(--navy);border-radius:7px;padding:24px 34px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.showcase-cta p{font-family:'Barlow Condensed';font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:.5px;text-transform:uppercase}
+.showcase-cta small{display:block;font-size:.76rem;color:rgba(255,255,255,.44);font-family:'Barlow';font-weight:300;text-transform:none;letter-spacing:0;margin-top:2px}
+
+/* PROCESS */
+.process-s{background:var(--bg)}
+.process-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:54px;position:relative}
+.process-steps::before{content:'';position:absolute;top:36px;left:calc(10% + 4px);right:calc(10% + 4px);height:2px;background:linear-gradient(to right,var(--orange),var(--navy));z-index:0}
+.ps{text-align:center;position:relative;z-index:1;padding:0 10px}
+.ps-num{width:72px;height:72px;border-radius:50%;background:var(--bg);border:3px solid var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-family:'Bebas Neue';font-size:1.65rem;color:var(--text);transition:.3s}
+.ps:hover .ps-num{background:var(--orange);border-color:var(--orange);color:#fff;transform:scale(1.1)}
+.ps-title{font-family:'Barlow Condensed';font-weight:700;font-size:.88rem;color:var(--text);text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.ps-desc{font-size:.74rem;color:var(--muted);line-height:1.6}
+
+/* PROCESS MOBILE — vertical timeline */
+@media(max-width:700px){
+  .process-steps{grid-template-columns:1fr;gap:0;margin-top:32px}
+  .process-steps::before{display:none}
+  .ps{display:grid;grid-template-columns:72px 1fr;gap:18px;align-items:flex-start;text-align:left;padding:0 0 0 0;margin-bottom:0;position:relative}
+  .ps::after{content:'';position:absolute;left:35px;top:72px;width:2px;height:calc(100% - 56px);background:linear-gradient(to bottom,var(--orange),var(--navy));z-index:0}
+  .ps:last-child::after{display:none}
+  .ps-num{margin:0;flex-shrink:0;position:relative;z-index:1}
+  .ps-body{padding:8px 0 32px}
+  .ps-title{margin-bottom:5px}
+}
+@media(min-width:701px) and (max-width:900px){
+  .process-steps{grid-template-columns:repeat(3,1fr);gap:24px}
+  .process-steps::before{display:none}
+  .ps:nth-child(4),.ps:nth-child(5){grid-column:auto}
+}
+
+/* WHY US */
+.whyus-s{background:var(--bg2)}
+.whyus-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:stretch}
+.why-list{display:flex;flex-direction:column;gap:3px}
+.wi{padding:22px 26px;border-radius:5px;border:1px solid var(--border);display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;transition:.3s;background:var(--card)}
+.wi:hover{border-color:var(--orange);background:var(--bg);transform:translateX(5px)}
+.wi-ico{width:42px;height:42px;border-radius:4px;background:var(--bg2);display:flex;align-items:center;justify-content:center;transition:.3s;border:1px solid var(--border)}
+.wi:hover .wi-ico{background:var(--orange);border-color:var(--orange)}
+.wi-ico i{color:var(--orange);font-size:.95rem;transition:.3s}
+.wi:hover .wi-ico i{color:#fff}
+.wi h4{font-family:'Barlow Condensed';font-weight:700;font-size:.98rem;color:var(--text);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.wi p{font-size:.79rem;color:var(--muted);line-height:1.7}
+/* Why Us right — CSS infographic */
+.wv{display:flex;flex-direction:column;gap:14px}
+.wv-hero{border-radius:8px;background:linear-gradient(145deg,var(--navy),var(--navy2));padding:28px;display:flex;align-items:center;gap:20px;position:relative;overflow:hidden}
+.wv-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 14px,rgba(255,255,255,.03) 14px,rgba(255,255,255,.03) 16px)}
+.wv-num{font-family:'Bebas Neue';font-size:5rem;color:var(--orange);line-height:1;position:relative;z-index:1}
+.wv-info{position:relative;z-index:1}
+.wv-info p{font-size:.68rem;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.45);margin-bottom:4px}
+.wv-info strong{font-family:'Barlow Condensed';font-size:1.4rem;font-weight:700;color:#fff;display:block;margin-bottom:3px}
+.wv-info span{font-size:.74rem;color:rgba(255,255,255,.55)}
+.wv-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wv-card{border-radius:7px;padding:20px;text-align:center}
+.wvc-or{background:var(--orange)}
+.wvc-nv{background:var(--navy)}
+.wv-card i{font-size:1.6rem;color:#fff;margin-bottom:8px;display:block}
+.wv-card .wvc-n{font-family:'Bebas Neue';font-size:2rem;color:#fff;line-height:1;display:block}
+.wv-card .wvc-l{font-size:.6rem;color:rgba(255,255,255,.75);letter-spacing:2px;text-transform:uppercase;line-height:1.4}
+.wv-chart{background:var(--card);border:1px solid var(--border);border-radius:7px;padding:18px}
+.wv-chart-lbl{font-family:'Barlow Condensed';font-size:.8rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.chart-b{display:flex;gap:8px;align-items:flex-end;height:70px}
+.cb{flex:1;border-radius:3px 3px 0 0;position:relative;transition:.3s}
+.cb:hover{filter:brightness(1.2)}
+.cb span{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:.48rem;color:var(--muted);white-space:nowrap}
+
+/* INDUSTRIES */
+.ind-s{background:var(--ind-bg)}
+.ind-s h2.sh{color:#fff}
+.ind-s .sub{color:rgba(255,255,255,.44)}
+.ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px}
+.ic{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:28px 20px;text-align:center;transition:.3s}
+.ic:hover{background:rgba(240,90,40,.1);border-color:rgba(240,90,40,.28);transform:translateY(-5px)}
+.ic i{font-size:1.9rem;color:var(--orange);display:block;margin-bottom:12px}
+.ic h4{font-family:'Barlow Condensed';font-size:.98rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.ic p{font-size:.74rem;color:rgba(255,255,255,.42);line-height:1.6}
+
+/* TESTIMONIALS */
+.testi-s{background:var(--bg)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.tc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:30px;position:relative;transition:.3s}
+.tc:hover{box-shadow:0 14px 34px rgba(0,0,0,.1);transform:translateY(-4px);border-color:var(--orange)}
+.tc::before{content:'\201C';font-family:Georgia,serif;font-size:4.2rem;color:var(--orange);opacity:.12;position:absolute;top:6px;left:16px;line-height:1}
+.tc-stars{display:flex;gap:3px;margin-bottom:12px}
+.tc-stars i{color:#f59e0b;font-size:.76rem}
+.tc-text{font-size:.84rem;color:var(--text);line-height:1.82;font-style:italic;margin-bottom:18px}
+.tc-auth{display:flex;align-items:center;gap:12px}
+.tc-av{width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:.95rem;color:#fff;flex-shrink:0}
+.tc-name strong{display:block;font-size:.84rem;color:var(--text);font-weight:700}
+.tc-name span{font-size:.71rem;color:var(--muted)}
+
+/* QUOTE */
+.quote-s{background:var(--bg2)}
+.ql{display:grid;grid-template-columns:1.15fr 1fr;gap:52px;align-items:start;margin-top:44px}
+.qform{background:var(--card);border-radius:8px;padding:44px;box-shadow:0 6px 28px rgba(0,0,0,.08)}
+.qform h3{font-family:'Barlow Condensed';font-size:1.35rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:1px;margin-bottom:24px}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}
+.fg label{font-size:.68rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)}
+.fg input,.fg select,.fg textarea{border:1.5px solid var(--border);border-radius:4px;padding:10px 13px;font-family:'Barlow';font-size:.86rem;color:var(--text);outline:none;background:var(--bg2);transition:.25s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--orange);background:var(--bg)}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.wa-send{width:100%;padding:14px;border:none;border-radius:4px;background:#25d366;color:#fff;font-family:'Barlow Condensed';font-size:1rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:.3s;margin-top:5px}
+.wa-send:hover{background:#1da952;transform:translateY(-3px);box-shadow:0 10px 26px rgba(37,211,102,.28)}
+.ci-block{margin-bottom:30px}
+.ci{display:flex;align-items:flex-start;gap:15px;padding:17px 0;border-bottom:1px solid var(--border)}
+.ci:first-child{padding-top:0}
+.ci:last-child{border-bottom:none}
+.ci-ico{width:40px;height:40px;background:rgba(240,90,40,.1);border:1px solid rgba(240,90,40,.18);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-ico i{color:var(--orange);font-size:.9rem}
+.ci-info strong{display:block;font-size:.65rem;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:3px}
+.ci-info a,.ci-info p{font-size:.88rem;color:var(--text);text-decoration:none;font-weight:600}
+.ci-info a:hover{color:var(--orange)}
+.perks{display:flex;flex-direction:column;gap:11px;background:var(--navy);border-radius:7px;padding:24px}
+.perk{display:flex;align-items:center;gap:10px;font-size:.83rem;color:rgba(255,255,255,.65)}
+.perk i{color:var(--orange);font-size:.82rem;width:17px}
+
+/* FOOTER */
+footer{background:var(--foot-bg);padding:62px 6% 26px;border-top:3px solid var(--orange)}
+.fg-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.fb-brand p{font-size:.78rem;color:rgba(255,255,255,.4);margin-top:13px;line-height:1.82;max-width:265px}
+.fl-txt{font-family:'Barlow Condensed';font-weight:800;font-size:1.45rem;color:#fff;letter-spacing:2px}
+.fl-txt span{color:var(--orange)}
+.fc h4{font-family:'Barlow Condensed';font-size:.82rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc ul li a{font-size:.78rem;color:rgba(255,255,255,.4);text-decoration:none;transition:.2s;display:flex;align-items:center;gap:6px}
+.fc ul li a::before{content:'›';color:var(--orange)}
+.fc ul li a:hover{color:var(--orange);transform:translateX(3px)}
+.f-bot{border-top:1px solid rgba(255,255,255,.07);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:13px}
+.f-bot p{font-size:.71rem;color:rgba(255,255,255,.27)}
+.socials{display:flex;gap:9px;margin-top:18px}
+.soc{width:32px;height:32px;border-radius:4px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.44);font-size:.84rem;transition:.25s;text-decoration:none}
+.soc:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+
+/* FLOATING */
+.floating{position:fixed;bottom:24px;right:24px;z-index:600;display:flex;flex-direction:column;gap:10px}
+.fb-btn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.28rem;color:#fff;text-decoration:none;box-shadow:0 7px 20px rgba(0,0,0,.22);transition:.3s;position:relative}
+.fb-btn::before{content:attr(data-tip);position:absolute;right:58px;background:#0d1929;color:#fff;font-family:'Barlow';font-size:.7rem;font-weight:600;padding:5px 10px;border-radius:3px;white-space:nowrap;opacity:0;transform:translateX(5px);transition:.25s;pointer-events:none}
+.fb-btn:hover::before{opacity:1;transform:translateX(0)}
+.fb-btn:hover{transform:scale(1.1)}
+.fb-wa{background:#25d366}
+.fb-call{background:var(--navy)}
+.bk-top{position:fixed;bottom:24px;left:24px;z-index:600;width:40px;height:40px;border-radius:3px;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.9rem;text-decoration:none;opacity:0;transform:translateY(14px);transition:.3s;box-shadow:0 5px 16px rgba(240,90,40,.36)}
+.bk-top.show{opacity:1;transform:translateY(0)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .65s,transform .65s}
+.rv.on{opacity:1;transform:translateY(0)}
+.rl{opacity:0;transform:translateX(-26px);transition:opacity .65s,transform .65s}
+.rl.on{opacity:1;transform:translateX(0)}
+.rr{opacity:0;transform:translateX(26px);transition:opacity .65s,transform .65s}
+.rr.on{opacity:1;transform:translateX(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hero-inner{grid-template-columns:1fr}
+  .hcard{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .about-vis{padding-bottom:20px}
+}
+@media(max-width:900px){
+  header{padding:16px 5%}
+  header.stuck{padding:12px 5%}
+  nav{display:none}
+  section{padding:65px 5%}
+  .hero-inner{padding:100px 5% 50px}
+  .about-grid,.whyus-grid,.ql{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .pg{grid-template-columns:repeat(2,1fr)}
+  .pc-big{grid-column:span 2;grid-row:span 1;height:260px}
+  .pc-wide{grid-column:span 2;height:200px}
+  .fg-grid{grid-template-columns:1fr 1fr;gap:28px}
+  .wv{margin-top:32px}
+  .fr2{grid-template-columns:1fr 1fr}
+  .trust-bar{gap:20px;padding:12px 5%}
+}
+@media(max-width:700px){
+  section{padding:55px 5%}
+  .hero-inner{padding:90px 5% 40px;gap:32px}
+  .hero h1{font-size:clamp(2.6rem,9vw,3.8rem)}
+  .hero-stats{gap:16px;flex-wrap:wrap}
+  .hs{min-width:calc(50% - 8px)}
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns .btn-fill,.hero-btns .btn-line{justify-content:center;width:100%}
+  .svc-grid{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .pg{grid-template-columns:1fr}
+  .pc-big,.pc-wide{grid-column:span 1;height:200px}
+  .testi-grid{grid-template-columns:1fr}
+  .fg-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .fr2{grid-template-columns:1fr}
+  .qform{padding:28px 20px}
+  .about-grid{gap:40px}
+  .whyus-grid{gap:32px}
+  .ql{gap:32px}
+  .showcase-cta{flex-direction:column;text-align:center}
+  .showcase-cta .btn-fill{width:100%;justify-content:center}
+  .f-bot{flex-direction:column;text-align:center}
+  .pillars{grid-template-columns:1fr}
+  .wv-cards{grid-template-columns:1fr 1fr}
+  .floating{bottom:16px;right:14px;gap:8px}
+  .fb-btn{width:44px;height:44px;font-size:1.1rem}
+  .bk-top{left:14px;bottom:16px}
+  .fb-btn::before{display:none}
+  .trust-bar{gap:14px;justify-content:flex-start}
+  .trust-item{font-size:.75rem}
+}
+@media(max-width:480px){
+  section{padding:48px 4%}
+  .hero-inner{padding:80px 4% 36px}
+  h2.sh{font-size:clamp(1.7rem,7vw,2.4rem)}
+  .svc-grid,.ind-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .sb{padding:28px 10px}
+  .sb-num{font-size:2.2rem}
+  .tc{padding:22px 18px}
+  .press-box{height:240px}
+  .hero-stats{gap:12px}
+  .qform{padding:20px 14px}
+  .trust-bar{flex-direction:column;align-items:flex-start;gap:10px}
+}
+@media(max-width:700px){
+  section{padding:55px 5%}
+  .hero-inner{padding:90px 5% 40px;gap:32px}
+  .hero h1{font-size:clamp(2.6rem,9vw,3.8rem)}
+  .hero-stats{gap:16px;flex-wrap:wrap}
+  .hs{min-width:calc(50% - 8px)}
+  .hero-btns{flex-direction:column;gap:10px}
+  .hero-btns .btn-fill,.hero-btns .btn-line{justify-content:center;width:100%}
+  .svc-grid{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .pg{grid-template-columns:1fr}
+  .pc-big,.pc-wide{grid-column:span 1;height:220px}
+  .testi-grid{grid-template-columns:1fr}
+  .fg-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .fr2{grid-template-columns:1fr}
+  .qform{padding:28px 20px}
+  .about-grid{gap:40px}
+  .whyus-grid{gap:32px}
+  .ql{gap:32px}
+  .showcase-cta{flex-direction:column;text-align:center}
+  .showcase-cta .btn-fill{width:100%;justify-content:center}
+  .f-bot{flex-direction:column;text-align:center}
+  .pillars{grid-template-columns:1fr}
+  .wv-cards{grid-template-columns:1fr 1fr}
+  .floating{bottom:16px;right:14px;gap:8px}
+  .fb-btn{width:44px;height:44px;font-size:1.1rem}
+  .bk-top{left:14px;bottom:16px}
+  .fb-btn::before{display:none}
+}
+@media(max-width:480px){
+  section{padding:48px 4%}
+  .hero-inner{padding:80px 4% 36px}
+  h2.sh{font-size:clamp(1.7rem,7vw,2.4rem)}
+  .svc-grid,.ind-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .sb{padding:28px 10px}
+  .sb-num{font-size:2.2rem}
+  .tc{padding:22px 18px}
+  .press-box{height:240px}
+  .hero-stats{gap:12px}
+  .qform{padding:20px 14px}
+}
+
+/* ===== SECOND CALL BUTTON ===== */
+.fb-call2{background:var(--navy2)!important}
+.fb-call2:hover{background:var(--navy)!important}
+
+/* Second phone nav — pulsing highlighted style */
+.nav-cta2{
+  background:transparent!important;
+  color:var(--orange)!important;
+  border:2px solid var(--orange)!important;
+  position:relative;
+  overflow:hidden;
+}
+.nav-cta2::before{
+  content:'';position:absolute;inset:0;
+  background:var(--orange);
+  transform:scaleX(0);transform-origin:left;
+  transition:.3s;z-index:-1;
+}
+.nav-cta2:hover{
+  color:#fff!important;
+  background:var(--orange)!important;
+}
+.nav-cta2 i{animation:ringPulse 2s ease infinite}
+@keyframes ringPulse{0%,100%{transform:scale(1)}40%{transform:scale(1.3) rotate(-15deg)}60%{transform:scale(1.1) rotate(10deg)}}
+
+/* ===== TRUST BADGE BAR ===== */
+.trust-bar{background:var(--navy);padding:14px 6%;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;border-top:2px solid rgba(240,90,40,.25)}
+.trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.7);font-family:'Barlow Condensed';font-size:.82rem;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.trust-item i{color:var(--orange);font-size:1rem}
+.trust-item strong{color:#fff}
+
+/* ===== DUAL PHONE HIGHLIGHT IN CONTACT ===== */
+.phone-highlight{
+  display:flex;flex-direction:column;gap:8px;margin-top:2px;
+}
+.phone-pill{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:7px 14px;border-radius:4px;font-size:.92rem;font-weight:700;
+  text-decoration:none;transition:.3s;
+}
+.phone-pill-primary{background:var(--orange);color:#fff!important}
+.phone-pill-primary:hover{background:var(--orange2);transform:translateX(4px)}
+.phone-pill-secondary{background:#1a2e4d;color:#ffffff!important;border:2px solid var(--orange)}
+.phone-pill-secondary:hover{background:var(--orange);border-color:var(--orange);transform:translateX(4px);color:#fff!important}
+.phone-pill-secondary i{color:var(--orange)!important}
+.phone-pill-secondary:hover i{color:#fff!important}
+
+/* ===== CURSOR GLOW ===== */
+.cursor-glow{pointer-events:none;position:fixed;width:24px;height:24px;border-radius:50%;background:rgba(240,90,40,.35);transform:translate(-50%,-50%);transition:transform .1s,opacity .3s;z-index:9999;mix-blend-mode:screen}
+.cursor-glow-ring{pointer-events:none;position:fixed;width:50px;height:50px;border-radius:50%;border:1.5px solid rgba(240,90,40,.4);transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease,width .3s,height .3s,opacity .3s;z-index:9998}
+
+/* ===== TOAST NOTIFICATION ===== */
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--navy);color:#fff;padding:12px 24px;border-radius:4px;font-family:'Barlow Condensed';font-size:.9rem;font-weight:600;letter-spacing:1px;border-left:4px solid var(--orange);opacity:0;pointer-events:none;transition:all .4s;z-index:9990;white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ===== PARTICLE CANVAS ===== */
+#particles{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+/* ===== TYPING EFFECT ===== */
+.type-cursor{display:inline-block;width:3px;height:.85em;background:var(--orange);margin-left:3px;vertical-align:middle;animation:blink .7s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* ===== PROGRESS BAR ===== */
+#page-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--orange),#f8a07a);width:0%;z-index:9999;transition:width .1s}
+
+/* ===== RIPPLE ===== */
+.ripple-container{position:relative;overflow:hidden}
+.ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.3);transform:scale(0);animation:rippleAnim .6s linear;pointer-events:none}
+@keyframes rippleAnim{to{transform:scale(4);opacity:0}}
+
+/* ===== TILT CARD ===== */
+.tilt-card{transition:transform .15s ease,box-shadow .15s ease}
+
+/* ===== GLITCH ===== */
+.glitch-text{position:relative}
+.glitch-text:hover{animation:glitch .4s linear}
+@keyframes glitch{
+  0%{text-shadow:none}
+  20%{text-shadow:2px 0 var(--orange),-2px 0 #00b4d8}
+  40%{text-shadow:-2px 0 var(--orange),2px 0 #00b4d8}
+  60%{text-shadow:2px 0 var(--orange),-2px 0 #00b4d8}
+  80%{text-shadow:-1px 0 #f8a07a,1px 0 #00b4d8}
+  100%{text-shadow:none}
+}
+
+/* ===== FLOATING LABEL INPUT ===== */
+.fl-group{position:relative;margin-bottom:0}
+.fl-group input,.fl-group select,.fl-group textarea{padding-top:18px!important;padding-bottom:6px!important}
+.fl-group label.fl-lbl{position:absolute;top:50%;left:13px;transform:translateY(-50%);color:rgba(255,255,255,.35);font-size:.86rem;pointer-events:none;transition:.2s;font-family:'Barlow'}
+.fl-group input:focus~label.fl-lbl,.fl-group input:not(:placeholder-shown)~label.fl-lbl,
+.fl-group select:focus~label.fl-lbl,.fl-group select:valid~label.fl-lbl{top:8px;transform:translateY(0);font-size:.65rem;color:var(--orange);letter-spacing:1px}
+
+/* ===== SCROLL INDICATOR ===== */
+.scroll-indicator{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.7}
+.scroll-dot{width:6px;height:6px;background:var(--orange);border-radius:50%;animation:scrollBounce 1.5s ease-in-out infinite}
+.scroll-dot:nth-child(2){animation-delay:.2s}
+.scroll-dot:nth-child(3){animation-delay:.4s}
+@keyframes scrollBounce{0%,100%{transform:translateY(0);opacity:.4}50%{transform:translateY(8px);opacity:1}}
+.scroll-indicator span{font-size:.6rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);font-family:'Barlow Condensed'}
+
+/* ===== PRINT COUNTER WIDGET ===== */
+.live-counter{display:inline-flex;align-items:center;gap:10px;background:rgba(240,90,40,.1);border:1px solid rgba(240,90,40,.3);padding:8px 16px;border-radius:4px;margin-top:12px}
+.live-counter .dot{width:8px;height:8px;border-radius:50%;background:#25d366;animation:pulse 1.5s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 6px rgba(37,211,102,0)}}
+.live-counter span{font-size:.72rem;color:rgba(255,255,255,.7);letter-spacing:1px;font-family:'Barlow Condensed';font-weight:600}
+.live-counter strong{color:var(--orange);font-family:'Bebas Neue';font-size:1.1rem}
+
+/* ===== HOVER SHINE ===== */
+.shine{position:relative;overflow:hidden}
+.shine::after{content:'';position:absolute;top:-50%;left:-75%;width:50%;height:200%;background:linear-gradient(to right,transparent,rgba(255,255,255,.08),transparent);transform:skewX(-20deg);transition:left .6s}
+.shine:hover::after{left:125%}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="hdr">
+  <a href="#home" class="logo">
+    <div class="logo-mark">NR</div>
+    <div class="logo-name">NR Enterprises<small>& Solutions</small></div>
+  </a>
+  <nav><ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#showcase">Products</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#quote">Get Quote</a></li>
+    <li><a href="tel:+919448844241" class="nav-cta"><i class="fas fa-phone-alt"></i> +91 94488 44241</a></li>
+    <li><a href="tel:+919986511325" class="nav-cta nav-cta2"><i class="fas fa-phone-alt"></i> +91 99865 11325</a></li>
+  </ul></nav>
+  <div class="hdr-right">
+    <button class="theme-btn" id="themeBtn" title="Toggle Dark/Light Mode">
+      <i class="fas fa-moon" id="themeIco"></i>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="particles"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-bar"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag"><i class="fas fa-industry"></i><span>Bangalore's Premier Industrial Printer — Est. 2001</span></div>
+      <h1><span class="out">Precision</span><br><span class="acc">Printing</span><br>Powerhouse</h1>
+      <p class="hero-p">From <strong>automated book manufacturing</strong> to <strong>large-format flex signage</strong> and <strong>corporate identity kits</strong> — powering India's biggest brands for <strong>25 years</strong>.</p>
+      <div class="hero-btns">
+        <a href="#quote" class="btn-fill"><i class="fab fa-whatsapp"></i> Get Instant Quote</a>
+        <a href="#services" class="btn-line"><i class="fas fa-th-large"></i> Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><strong class="hc" data-t="25">0</strong><span>Years Legacy</span></div>
+        <div class="hs"><strong class="hc" data-t="500">0</strong><span>Clients Served</span></div>
+        <div class="hs"><strong class="hc" data-t="12">0</strong><span>Service Types</span></div>
+        <div class="hs"><strong class="hc" data-t="100">0</strong><span>% Precision</span></div>
+      </div>
+      <div class="live-counter"><div class="dot"></div><span>Prints today:</span> <strong id="livePrints">0</strong></div>
+    </div>
+    <div class="hcard">
+      <h3><i class="fab fa-whatsapp" style="color:#25d366;margin-right:8px"></i>Quick Quote</h3>
+      <form id="hForm">
+        <input class="hf-in" type="text" id="hN" placeholder="Your Full Name" required>
+        <input class="hf-in" type="tel" id="hP" placeholder="Mobile Number" required>
+        <select class="hf-sel" id="hS" required>
+          <option value="">Select Service</option>
+          <option>Bulk Book Publishing</option><option>Brochures &amp; Flyers</option>
+          <option>Flex / Hoardings / Banners</option><option>Corporate Identity Kit</option>
+          <option>Packaging &amp; Labels</option><option>Exhibition Materials</option>
+          <option>Calendars &amp; Diaries</option><option>Others</option>
+        </select>
+        <input class="hf-in" type="number" id="hQ" placeholder="Approx. Quantity" required>
+        <button type="submit" class="wa-go"><i class="fab fa-whatsapp"></i>Connect on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-dot"></div>
+    <div class="scroll-dot"></div>
+    <div class="scroll-dot"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+<div class="marquee-band">
+  <div class="mq-track">
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>School Textbooks</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Corporate Brochures</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Flex Hoardings</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Premium Business Cards</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Packaging &amp; Labels</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Exhibition Standees</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Annual Reports</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Product Catalogues</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Custom Diaries</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Backlit Signage</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>School Textbooks</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Corporate Brochures</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Flex Hoardings</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Premium Business Cards</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Packaging &amp; Labels</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Exhibition Standees</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Annual Reports</div>
+    <div class="mq-item"><i class="fas fa-circle-dot"></i>Product Catalogues</div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><i class="fas fa-phone-volume"></i><span>Call: <strong>94488 44241</strong> / <strong>99865 11325</strong></span></div>
+  <div class="trust-item"><i class="fas fa-map-marker-alt"></i><span>Koramangala, <strong>Bangalore</strong></span></div>
+  <div class="trust-item"><i class="fas fa-print"></i><span><strong>12</strong> Service Categories</span></div>
+  <div class="trust-item"><i class="fas fa-bolt"></i><span>Express <strong>24-Hr</strong> Production</span></div>
+  <div class="trust-item"><i class="fas fa-clock"></i><span>Mon–Sat <strong>9AM–7PM</strong></span></div>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="sb rv d1"><span class="sb-num sc" data-t="25">0</span><div class="sb-label">Years of Excellence</div><div class="sb-sub">Since 2001, Bangalore</div></div>
+  <div class="sb rv d2"><span class="sb-num sc" data-t="500">0</span><div class="sb-label">Corporate Clients</div><div class="sb-sub">Pan-India Delivered</div></div>
+  <div class="sb rv d3"><span class="sb-num">10M+</span><div class="sb-label">Prints Delivered</div><div class="sb-sub">Verified &amp; Quality Checked</div></div>
+  <div class="sb rv d4"><span class="sb-num">2 Hr</span><div class="sb-label">Quote Response</div><div class="sb-sub">WhatsApp &amp; Email</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-s" id="about">
+  <div class="about-grid">
+    <div class="about-vis rl">
+      <div class="press-box">
+        <div class="press-content">
+          <i class="fas fa-print press-icon-big"></i>
+          <div class="press-bars">
+            <div class="pb pb1"></div><div class="pb pb2"></div>
+            <div class="pb pb3"></div><div class="pb pb4"></div><div class="pb pb5"></div>
+          </div>
+          <div class="press-lbl">Industrial Offset Press</div>
+        </div>
+      </div>
+      <div class="about-badge"><strong>25</strong><small>Year Legacy</small></div>
+      <div class="cmyk-box">
+        <div class="cmyk-strips">
+          <span class="cs cs-c">C</span><span class="cs cs-m">M</span>
+          <span class="cs cs-y">Y</span><span class="cs cs-k">K</span>
+        </div>
+        <div class="cmyk-foot">CMYK Color Printing</div>
+      </div>
+    </div>
+    <div class="about-text rr">
+      <div class="eyebrow"><span>Who We Are</span></div>
+      <h2 class="sh">Bangalore's Most <span class="acc">Trusted</span> Print Partner</h2>
+<p>NR Enterprises &amp; Solutions is an emerging printing partner based in Koramangala, Bangalore, delivering reliable and precision-focused paper and flex printing services for businesses, institutions, and growing brands.</p>
+<p>With a commitment to <strong>color consistency, material quality, and dimensional accuracy</strong>, we ensure every print reflects professionalism and brand value.</p>
+<p>Whether it’s short-run corporate stationery or bulk educational materials, every project is handled with <strong>care, quality checks, and timely execution.</strong></p>
+      <div class="pillars">
+        <div class="pill"><h4>Mission</h4><p>To empower businesses and institutions with reliable, high-quality printing solutions that enhance brand presence and communication.</p></div>
+        <div class="pill"><h4>Vision</h4><p>To become a trusted and innovative printing partner in Bangalore by delivering consistent quality, ethical business practices, and customer-focused service.</p></div>
+        <div class="pill"><h4>Values</h4><p>Quality-driven execution, transparent pricing, timely delivery, customer-focused service, and continuous improvement form the foundation of NR Enterprises &amp; Solutions.</p></div>
+        <div class="pill"><h4>Our Edge</h4><p>At NR Enterprises &amp; Solutions, our strength lies in precision, responsiveness, and personalized service. We combine modern printing technology with hands-on quality checks to ensure every output meets professional standards.
+</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="svc-s" id="services">
+  <div class="svc-head">
+    <div>
+      <div class="eyebrow"><span>What We Do</span></div>
+      <h2 class="sh">Industrial Printing <span class="acc">Catalog</span></h2>
+    </div>
+    <p class="sub">12 specialized categories. 80+ print products. One accountable partner.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card rv d1"><span class="svc-n">01</span><div class="svc-ico"><i class="fas fa-book-open"></i></div><div class="svc-title">Bulk Book Publishing</div><p class="svc-desc">End-to-end book manufacturing from DTP to binding for publishers and institutions.</p><ul class="svc-list"><li>School &amp; College Textbooks</li><li>Spiral Bound Notebooks</li><li>Hardbound Case Journals</li><li>Softcover Question Banks</li><li>Workbooks &amp; Activity Books</li><li>Bilingual Reference Manuals</li></ul></div>
+    <div class="svc-card rv d2"><span class="svc-n">02</span><div class="svc-ico"><i class="fas fa-layer-group"></i></div><div class="svc-title">Marketing &amp; Promo Materials</div><p class="svc-desc">High-impact promotional print from retail shelves to exhibition floors.</p><ul class="svc-list"><li>Bi-fold &amp; Tri-fold Brochures</li><li>High-GSM Product Flyers</li><li>Event Programmes &amp; Booklets</li><li>Retail POP Displays</li><li>Door Hangers &amp; Shelf Talkers</li><li>Postcards &amp; Direct Mailers</li></ul></div>
+    <div class="svc-card rv d3"><span class="svc-n">03</span><div class="svc-ico"><i class="fas fa-expand-arrows-alt"></i></div><div class="svc-title">Large Format Flex &amp; Signage</div><p class="svc-desc">Outdoor-grade UV-resistant printing for maximum brand visibility.</p><ul class="svc-list"><li>Vinyl &amp; Mesh Banners</li><li>Backlit &amp; Frontlit Signage</li><li>Outdoor Hoardings &amp; Gantries</li><li>Weatherproof Wall Wraps</li><li>Floor &amp; Pavement Graphics</li><li>Vehicle Decals &amp; Wraps</li></ul></div>
+    <div class="svc-card rv d1"><span class="svc-n">04</span><div class="svc-ico"><i class="fas fa-id-card"></i></div><div class="svc-title">Corporate Identity Kits</div><p class="svc-desc">Complete stationery printing for consistent, memorable brand interactions.</p><ul class="svc-list"><li>Premium Business Cards (Foil, UV)</li><li>Letterheads &amp; Envelopes</li><li>Photo ID Cards &amp; Lanyards</li><li>Branded Corporate Folders</li><li>Presentation Sleeves</li><li>Compliment Slips &amp; Notepads</li></ul></div>
+    <div class="svc-card rv d2"><span class="svc-n">05</span><div class="svc-ico"><i class="fas fa-box-open"></i></div><div class="svc-title">Packaging &amp; Labels</div><p class="svc-desc">Custom packaging manufactured to FSSAI and export quality standards.</p><ul class="svc-list"><li>Corrugated Shipping Boxes</li><li>Rigid Gift Boxes</li><li>Adhesive Product Labels</li><li>Shrink Sleeve Labels</li><li>Pharmaceutical Leaflets</li><li>Seal Stickers &amp; QR Labels</li></ul></div>
+    <div class="svc-card rv d3"><span class="svc-n">06</span><div class="svc-ico"><i class="fas fa-graduation-cap"></i></div><div class="svc-title">Educational Stationery</div><p class="svc-desc">Bulk stationery for schools, coaching institutes, and universities.</p><ul class="svc-list"><li>Ruled &amp; Graph Notebooks</li><li>Examination Answer Booklets</li><li>Lab Record Books</li><li>Student Planners &amp; Diaries</li><li>Project Report Covers</li><li>Index &amp; Flash Cards</li></ul></div>
+    <div class="svc-card rv d1"><span class="svc-n">07</span><div class="svc-ico"><i class="fas fa-th-large"></i></div><div class="svc-title">Exhibition &amp; Event Materials</div><p class="svc-desc">Turn-key exhibition printing for trade shows, expos, and corporate events.</p><ul class="svc-list"><li>Roll-Up &amp; Pop-Up Standees</li><li>Backdrop &amp; Step-Repeat Banners</li><li>Table Covers &amp; Runners</li><li>Hanging Ceiling Displays</li><li>Podium &amp; Stage Wraps</li><li>Event Signage Packages</li></ul></div>
+    <div class="svc-card rv d2"><span class="svc-n">08</span><div class="svc-ico"><i class="fas fa-file-alt"></i></div><div class="svc-title">Annual Reports &amp; Catalogues</div><p class="svc-desc">Prestige-quality publishing for disclosures, catalogues, and reports.</p><ul class="svc-list"><li>Corporate Annual Reports</li><li>Product &amp; Service Catalogues</li><li>Capability Statements</li><li>Investment Prospectuses</li><li>Tender &amp; Bid Documents</li><li>Sustainability Reports</li></ul></div>
+    <div class="svc-card rv d3"><span class="svc-n">09</span><div class="svc-ico"><i class="fas fa-qrcode"></i></div><div class="svc-title">Security Printing</div><p class="svc-desc">Anti-counterfeit solutions for certificates, tickets, and credentials.</p><ul class="svc-list"><li>Security Certificates &amp; Bonds</li><li>Event Tickets with QR/Barcodes</li><li>Holographic Sticker Labels</li><li>Tamper-Evident Seals</li><li>Award Scrolls</li><li>Numbered Document Booklets</li></ul></div>
+    <div class="svc-card rv d1"><span class="svc-n">10</span><div class="svc-ico"><i class="fas fa-newspaper"></i></div><div class="svc-title">Magazine &amp; Newsletter Print</div><p class="svc-desc">Saddle-stitched or perfect-bound periodical printing with consistent color.</p><ul class="svc-list"><li>Monthly &amp; Quarterly Magazines</li><li>Internal Company Newsletters</li><li>Alumni Bulletins</li><li>Industry Trade Publications</li><li>Community Newspapers</li><li>Digital Print-on-Demand</li></ul></div>
+    <div class="svc-card rv d2"><span class="svc-n">11</span><div class="svc-ico"><i class="fas fa-calendar-alt"></i></div><div class="svc-title">Calendars &amp; Branded Diaries</div><p class="svc-desc">Keep your brand visible 365 days a year — perfect for corporate gifting.</p><ul class="svc-list"><li>Wall &amp; Table Calendars</li><li>Desk Pad Calendars</li><li>Custom Branded Diaries</li><li>Pocket Planners</li><li>Academic Year Planners</li><li>Photo Calendars</li></ul></div>
+    <div class="svc-card rv d3"><span class="svc-n">12</span><div class="svc-ico"><i class="fas fa-truck-fast"></i></div><div class="svc-title">Managed Print &amp; Logistics</div><p class="svc-desc">End-to-end managed print with warehousing, kitting, and pan-India dispatch.</p><ul class="svc-list"><li>Inventory-Managed Programs</li><li>Kitting &amp; Assembly Services</li><li>Pan-India Courier Dispatch</li><li>Express 24-Hour Production</li><li>Pre-Press &amp; Proofing Services</li><li>Dedicated Account Manager</li></ul></div>
+  </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase-s" id="showcase">
+  <div class="ctr">
+    <div class="eyebrow"><span>Our Print Products</span></div>
+    <h2 class="sh">Everything We <span class="acc">Produce</span></h2>
+    <p class="sub">Visual showcase of print products manufactured daily at our Bangalore facility.</p>
+  </div>
+  <div class="pg">
+    <!-- Row 1-2: Big press (2col×2row) + 2 stacked meds -->
+    <div class="pc pc-big rv d1">
+      <div class="pc-inner vis-press" style="height:100%;position:relative">
+        <i class="fas fa-cog gear-anim"></i>
+        <div style="font-family:'Bebas Neue';font-size:1.6rem;color:rgba(255,255,255,.6);letter-spacing:3px;text-align:center;position:relative;z-index:1">Industrial<br>Offset Press</div>
+        <div class="press-bars2" style="position:relative;z-index:1">
+          <div class="pb2a" style="width:28px;height:38px;background:var(--orange);border-radius:3px;animation-delay:0s"></div>
+          <div class="pb2a" style="width:28px;height:54px;background:#f8a07a;border-radius:3px;animation-delay:.18s"></div>
+          <div class="pb2a" style="width:28px;height:28px;background:var(--orange);border-radius:3px;animation-delay:.36s"></div>
+          <div class="pb2a" style="width:28px;height:62px;background:#f8a07a;border-radius:3px;animation-delay:.09s"></div>
+          <div class="pb2a" style="width:28px;height:42px;background:var(--orange);border-radius:3px;animation-delay:.27s"></div>
+        </div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-industry"></i>Industrial Offset Press</div><div class="pc-sub">Precision color printing at scale — textbooks, catalogues &amp; annual reports</div></div>
+    </div>
+    <div class="pc pc-med rv d2">
+      <div class="pc-inner vis-broch" style="height:100%">
+        <div class="bfold"></div><div class="bfold bfold2"></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-file-alt"></i>Brochures &amp; Flyers</div></div>
+    </div>
+    <div class="pc pc-med rv d3">
+      <div class="pc-inner vis-biz" style="height:100%">
+        <div class="biz-stack"><div class="biz biz-a"></div><div class="biz biz-b"></div><div class="biz biz-c"></div></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-id-card"></i>Business Cards</div></div>
+    </div>
+    <!-- Row 3: 3 meds filling the row -->
+    <div class="pc pc-med rv d1">
+      <div class="pc-inner vis-books" style="height:100%">
+        <div class="bk" style="width:22px;height:88px;background:#f05a28"></div>
+        <div class="bk" style="width:22px;height:110px;background:#fff"></div>
+        <div class="bk" style="width:22px;height:76px;background:#243d63"></div>
+        <div class="bk" style="width:22px;height:100px;background:#f8a07a"></div>
+        <div class="bk" style="width:22px;height:86px;background:#e8f0fe"></div>
+        <div class="bk" style="width:22px;height:94px;background:#f05a28"></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-book"></i>Books &amp; Textbooks</div></div>
+    </div>
+    <div class="pc pc-med rv d2">
+      <div class="pc-inner vis-cal" style="height:100%">
+        <div class="cal-card">
+          <div class="cal-hdr">MAR 2026</div>
+          <div class="cal-body">
+            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+            <span></span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+            <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+            <span>15</span><span>16</span><span>17</span><span class="cal-today">18</span><span>19</span><span>20</span><span>21</span>
+          </div>
+        </div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-calendar-alt"></i>Calendars &amp; Diaries</div></div>
+    </div>
+    <div class="pc pc-med rv d3">
+      <div class="pc-inner vis-cmyk" style="height:100%">
+        <div class="cs2" style="background:#00b4d8">C</div>
+        <div class="cs2" style="background:#e63980">M</div>
+        <div class="cs2" style="background:#f7c900">Y</div>
+        <div class="cs2" style="background:#1a1a1a">K</div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-palette"></i>CMYK Color Precision</div></div>
+    </div>
+    <!-- Row 4: wide (2col) + 1 med -->
+    <div class="pc pc-wide rv d1">
+      <div class="pc-inner vis-flex" style="height:100%">
+        <div class="flex-banner"><span>LARGE FORMAT BANNER PRINTING</span></div>
+        <div class="flex-posts"><div class="flex-post"></div><div class="flex-post"></div><div class="flex-post"></div></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-expand-arrows-alt"></i>Flex Banners &amp; Hoardings</div><div class="pc-sub">UV-resistant outdoor printing — hoardings, standees, wall wraps &amp; vehicle graphics</div></div>
+    </div>
+    <div class="pc pc-med rv d2">
+      <div class="pc-inner vis-flyer" style="height:100%">
+        <div class="fl" style="width:50px;height:68px;background:#fff;transform:rotate(-8deg)"></div>
+        <div class="fl" style="width:50px;height:68px;background:#1a2e4d;transform:rotate(2deg)"></div>
+        <div class="fl" style="width:50px;height:68px;background:#f05a28;transform:rotate(10deg)"></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-layer-group"></i>Flyers &amp; Posters</div></div>
+    </div>
+    <!-- Row 5: 2 meds + 1 wide -->
+    <div class="pc pc-med rv d1">
+      <div class="pc-inner vis-pack" style="height:100%">
+        <div class="box-wrap"><div class="bx bx-a"></div><div class="bx bx-b"></div></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-box-open"></i>Packaging &amp; Boxes</div></div>
+    </div>
+    <div class="pc pc-med rv d2">
+      <div class="pc-inner vis-nb" style="height:100%">
+        <div class="nb nb-b"></div><div class="nb nb-a"></div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-book-open"></i>Notebooks &amp; Stationery</div></div>
+    </div>
+    <div class="pc pc-med rv d3">
+      <div class="pc-inner" style="height:100%;background:linear-gradient(135deg,var(--orange),#c94618);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+        <i class="fas fa-award" style="font-size:3rem;color:rgba(255,255,255,.8)"></i>
+        <div style="font-family:'Bebas Neue';font-size:1.1rem;color:#fff;letter-spacing:3px;text-align:center">ISO Quality<br>Certified</div>
+      </div>
+      <div class="pc-ov"><div class="pc-title"><i class="fas fa-certificate"></i>Quality Certified</div><div class="pc-sub">Every print batch quality-checked before dispatch</div></div>
+    </div>
+  </div>
+  </div>
+  <div class="showcase-cta">
+    <div><p>Don't see your product? We make 80+ print products.<small>Describe your requirement — get a quote in 2 hours.</small></p></div>
+    <a href="#quote" class="btn-fill"><i class="fab fa-whatsapp"></i>Discuss Your Project</a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-s" id="process">
+  <div class="ctr">
+    <div class="eyebrow"><span>How It Works</span></div>
+    <h2 class="sh">Our 5-Step <span class="acc">Production Process</span></h2>
+    <p class="sub">Transparent, end-to-end — zero surprises, on time every time.</p>
+  </div>
+  <div class="process-steps">
+    <div class="ps rv d1"><div class="ps-num">01</div><div class="ps-body"><div class="ps-title">Consultation</div><p class="ps-desc">Connect via WhatsApp or call. Share your brief — quantity, specs, deadline, and budget.</p></div></div>
+    <div class="ps rv d2"><div class="ps-num">02</div><div class="ps-body"><div class="ps-title">Quotation</div><p class="ps-desc">Receive a detailed, itemized quote within 2 hours. No hidden charges, ever.</p></div></div>
+    <div class="ps rv d3"><div class="ps-num">03</div><div class="ps-body"><div class="ps-title">Pre-Press</div><p class="ps-desc">Our DTP team prepares, checks, and color-profiles your files. Digital proof provided.</p></div></div>
+    <div class="ps rv d4"><div class="ps-num">04</div><div class="ps-body"><div class="ps-title">Production</div><p class="ps-desc">Industrial printing with real-time quality checks at every milestone.</p></div></div>
+    <div class="ps rv d5"><div class="ps-num">05</div><div class="ps-body"><div class="ps-title">Delivery</div><p class="ps-desc">Secure packaging with GPS-tracked pan-India logistics. On time, guaranteed.</p></div></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus-s" id="why">
+  <div class="whyus-grid">
+    <div>
+      <div class="eyebrow"><span>Why NR Enterprises</span></div>
+      <h2 class="sh">The Standard That <span class="acc">Sets Us Apart</span></h2>
+      <p class="sub" style="margin-bottom:28px">25 years of refining what premium industrial printing delivers.</p>
+      <div class="why-list">
+       <div class="wi rv">
+  <div class="wi-ico"><i class="fas fa-microscope"></i></div>
+  <div>
+    <h4>Precision-Focused Color Accuracy</h4>
+    <p>We maintain consistent color balance and sharp detailing through calibrated printing processes and careful quality checks at every stage.</p>
+  </div>
+</div>
+
+<div class="wi rv d1">
+  <div class="wi-ico"><i class="fas fa-shield-halved"></i></div>
+  <div>
+    <h4>Quality-Checked Output</h4>
+    <p>Every batch undergoes structured inspection before dispatch to ensure clarity, alignment, finishing quality, and material durability.</p>
+  </div>
+</div>
+
+<div class="wi rv d2">
+  <div class="wi-ico"><i class="fas fa-clock"></i></div>
+  <div>
+    <h4>Timely Execution</h4>
+    <p>We understand the importance of deadlines and work with efficient production scheduling to ensure on-time delivery for both small and bulk orders.</p>
+  </div>
+</div>
+
+<div class="wi rv d3">
+  <div class="wi-ico"><i class="fas fa-leaf"></i></div>
+  <div>
+    <h4>Responsible Material Selection</h4>
+    <p>We encourage the use of quality paper stock and sustainable material options wherever possible to support responsible printing practices.</p>
+  </div>
+</div>
+
+<div class="wi rv d4">
+  <div class="wi-ico"><i class="fas fa-headset"></i></div>
+  <div>
+    <h4>Personalized Client Support</h4>
+    <p>From quotation to final delivery, we provide responsive communication and dedicated assistance to ensure a smooth and transparent experience.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="wv rr" style="display:flex;flex-direction:column;gap:14px">
+      <div class="wv-hero">
+        <div class="wv-num">25</div>
+        <div class="wv-info">
+          <p>Years of Print Excellence</p>
+          <strong>NR Enterprises</strong>
+          <span>Est. 2001 · Koramangala, Bangalore</span>
+        </div>
+      </div>
+      <div class="wv-cards">
+        <div class="wv-card wvc-or"><i class="fas fa-award"></i><span class="wvc-n">99.2%</span><span class="wvc-l">On-Time<br>Delivery Rate</span></div>
+        <div class="wv-card wvc-nv"><i class="fas fa-shield-halved"></i><span class="wvc-n">ISO</span><span class="wvc-l">Compliant<br>Operations</span></div>
+      </div>
+      <div class="wv-chart" style="flex:1">
+        <div class="wv-chart-lbl"><i class="fas fa-chart-bar" style="color:var(--orange);margin-right:7px"></i>Production Volume by Category</div>
+        <div class="chart-b" style="height:calc(100% - 32px);min-height:70px">
+          <div class="cb" style="height:85%;background:var(--orange)"><span>Books</span></div>
+          <div class="cb" style="height:68%;background:#f8a07a"><span>Brochures</span></div>
+          <div class="cb" style="height:58%;background:var(--orange)"><span>Flex</span></div>
+          <div class="cb" style="height:48%;background:#f8a07a"><span>Corporate</span></div>
+          <div class="cb" style="height:74%;background:var(--orange)"><span>Packaging</span></div>
+          <div class="cb" style="height:44%;background:#f8a07a"><span>Events</span></div>
+          <div class="cb" style="height:55%;background:var(--orange)"><span>Others</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="ind-s" id="industries">
+  <div class="ctr">
+    <div class="eyebrow"><span>Industries We Serve</span></div>
+    <h2 class="sh">Trusted Across <span class="acc">Every Sector</span></h2>
+    <p class="sub">From school textbooks to Fortune 500 annual reports — same precision, every time.</p>
+  </div>
+  <div class="ind-grid">
+    <div class="ic rv d1"><i class="fas fa-school"></i><h4>Education</h4><p>Schools, colleges, universities, coaching institutes, and ed-tech companies.</p></div>
+    <div class="ic rv d2"><i class="fas fa-building-columns"></i><h4>Corporate &amp; BFSI</h4><p>Banks, NBFCs, insurance, and large enterprises needing identity printing.</p></div>
+    <div class="ic rv d3"><i class="fas fa-store"></i><h4>Retail &amp; FMCG</h4><p>Labels, packaging, POS materials, and promotional collateral at scale.</p></div>
+    <div class="ic rv d4"><i class="fas fa-hospital"></i><h4>Healthcare &amp; Pharma</h4><p>Regulatory-compliant leaflets, prescription pads, and clinic identity.</p></div>
+    <div class="ic rv d1"><i class="fas fa-hard-hat"></i><h4>Construction &amp; Real Estate</h4><p>Project hoardings, property brochures, and site signage at volume.</p></div>
+    <div class="ic rv d2"><i class="fas fa-hotel"></i><h4>Hospitality &amp; Events</h4><p>Menus, event signage, table tents, POP displays, and VIP kits.</p></div>
+    <div class="ic rv d3"><i class="fas fa-microchip"></i><h4>IT &amp; Technology</h4><p>Product packaging, user manuals, quick-start guides, marketing decks.</p></div>
+    <div class="ic rv d4"><i class="fas fa-gavel"></i><h4>Government &amp; NGOs</h4><p>Tender documents, awareness materials, voter IDs, campaign collateral.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-s" id="testimonials">
+  <div class="ctr">
+    <div class="eyebrow"><span>Client Testimonials</span></div>
+    <h2 class="sh">Trusted by <span class="acc">500+</span> Clients</h2>
+    <p class="sub">Real feedback from brands and institutions served across 25 years.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="tc rv d1">
+      <div class="tc-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="tc-text">"NR Enterprises delivered 80,000 textbooks for our state-wide rollout without a single defect. Their pre-press team caught a critical DPI error before print that would have cost us lakhs. Truly professional."</p>
+      <div class="tc-auth"><div class="tc-av">AK</div><div class="tc-name"><strong>Arun Kumar</strong><span>Director of Publications, Vidyaprakash Group</span></div></div>
+    </div>
+    <div class="tc rv d2">
+      <div class="tc-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="tc-text">"We've trusted NR Enterprises with our annual corporate kits for 8 years. The Pantone matching is impeccable. Our brand guidelines are respected every single time — no exceptions."</p>
+      <div class="tc-auth"><div class="tc-av">PM</div><div class="tc-name"><strong>Priya Mehta</strong><span>Brand Manager, Synergix Technologies Pvt. Ltd.</span></div></div>
+    </div>
+    <div class="tc rv d3">
+      <div class="tc-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p class="tc-text">"The hoarding and standee printing for our Bangalore Marathon was outstanding — vibrant, weatherproof, and delivered 2 days early. They coordinated delivery across 14 venues seamlessly."</p>
+      <div class="tc-auth"><div class="tc-av">RS</div><div class="tc-name"><strong>Rahul Shetty</strong><span>Event Director, Bengaluru Sports Foundation</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-s" id="quote">
+  <div class="eyebrow"><span>Get In Touch</span></div>
+  <h2 class="sh">Request a <span class="acc">Project Quote</span></h2>
+  <p class="sub">Fill the form and our team will reach you on WhatsApp within 2 hours with a no-obligation quote.</p>
+  <div class="ql">
+    <div class="qform rl">
+      <h3><i class="fas fa-file-invoice" style="color:var(--orange);margin-right:8px"></i>Project Details Form</h3>
+      <form id="mForm">
+        <div class="fr2">
+          <div class="fg"><label>Full Name</label><input type="text" id="mN" placeholder="Your name" required></div>
+          <div class="fg"><label>Company</label><input type="text" id="mC" placeholder="Company name"></div>
+        </div>
+        <div class="fr2">
+          <div class="fg"><label>Mobile Number</label><input type="tel" id="mP" placeholder="+91 XXXXX XXXXX" required></div>
+          <div class="fg"><label>Business Email</label><input type="email" id="mE" placeholder="you@company.com"></div>
+        </div>
+        <div class="fr2">
+          <div class="fg"><label>Service Category</label>
+            <select id="mS" required>
+              <option value="">Select Category</option>
+              <option>Bulk Book Publishing</option><option>Brochures &amp; Flyers</option>
+              <option>Flex / Hoardings / Banners</option><option>Corporate Identity Kit</option>
+              <option>Packaging &amp; Labels</option><option>Exhibition Materials</option>
+              <option>Annual Reports &amp; Catalogues</option><option>Security Printing</option>
+              <option>Calendars &amp; Diaries</option><option>Managed Print Program</option>
+              <option>Others</option>
+            </select>
+          </div>
+          <div class="fg"><label>Approx. Quantity</label><input type="number" id="mQ" placeholder="e.g. 500, 5000" required></div>
+        </div>
+        <div class="fg"><label>Technical Specifications</label><textarea id="mD" rows="4" placeholder="Paper type, size, GSM, binding, finishing (lamination/spot UV), delivery location and deadline..."></textarea></div>
+        <button type="submit" class="wa-send"><i class="fab fa-whatsapp" style="font-size:1.15rem"></i>Send via WhatsApp — Quote in 2 Hours</button>
+      </form>
+    </div>
+    <div class="rr">
+      <div class="ci-block">
+        <div class="ci"><div class="ci-ico"><i class="fas fa-phone-alt"></i></div><div class="ci-info"><strong>Call Directly</strong><div class="phone-highlight"><a href="tel:+919448844241" class="phone-pill phone-pill-primary"><i class="fas fa-phone-alt"></i>+91 94488 44241</a><a href="tel:+919986511325" class="phone-pill phone-pill-secondary"><i class="fas fa-phone-alt"></i>+91 99865 11325</a></div></div></div>
+        <div class="ci"><div class="ci-ico"><i class="fab fa-whatsapp"></i></div><div class="ci-info"><strong>WhatsApp</strong><a href="https://wa.me/919448844241" target="_blank">Chat with a Print Consultant</a></div></div>
+        <div class="ci"><div class="ci-ico"><i class="fas fa-envelope"></i></div><div class="ci-info"><strong>Email</strong><a href="mailto:nrenterprises2001@gmail.com">nrenterprises2001@gmail.com</a></div></div>
+        <div class="ci"><div class="ci-ico"><i class="fas fa-map-marker-alt"></i></div><div class="ci-info"><strong>Factory &amp; Office</strong><p>Koramangala, Bangalore — 560034, Karnataka</p></div></div>
+        <div class="ci"><div class="ci-ico"><i class="fas fa-clock"></i></div><div class="ci-info"><strong>Working Hours</strong><p>Mon–Sat: 9:00 AM – 7:00 PM IST</p></div></div>
+      </div>
+      <div class="perks">
+        <div class="perk"><i class="fas fa-check-circle"></i>2-Hour WhatsApp quote response</div>
+        <div class="perk"><i class="fas fa-check-circle"></i>Free pre-press file review</div>
+        <div class="perk"><i class="fas fa-check-circle"></i>No-commitment digital proof</div>
+        <div class="perk"><i class="fas fa-check-circle"></i>Pan-India logistics available</div>
+        <div class="perk"><i class="fas fa-check-circle"></i>Bulk order discounts</div>
+        <div class="perk"><i class="fas fa-check-circle"></i>Express 24-hour production</div>
+        <div class="perk"><i class="fas fa-check-circle"></i>Dedicated account manager</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg-grid">
+    <div class="fb-brand">
+      <div class="fl-txt">NR <span>ENTERPRISES</span></div>
+      <p>Bangalore's premier industrial printing hub since 2001. Trusted by 500+ corporate and educational clients. Precision, ethics, and quality — in every print.</p>
+      <div class="socials">
+        <a href="https://wa.me/919448844241" class="soc" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:nrenterprises2001@gmail.com" class="soc"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+919448844241" class="soc" title="+91 94488 44241"><i class="fas fa-phone"></i></a>
+        <a href="tel:+919986511325" class="soc" title="+91 99865 11325"><i class="fas fa-phone-alt"></i></a>
+      </div>
+    </div>
+    <div class="fc"><h4>Services</h4><ul>
+      <li><a href="#services">Bulk Book Publishing</a></li><li><a href="#services">Brochures &amp; Flyers</a></li>
+      <li><a href="#services">Flex &amp; Hoardings</a></li><li><a href="#services">Corporate Identity</a></li>
+      <li><a href="#services">Packaging &amp; Labels</a></li><li><a href="#services">Exhibition Materials</a></li>
+    </ul></div>
+    <div class="fc"><h4>Company</h4><ul>
+      <li><a href="#about">Our Legacy</a></li><li><a href="#process">Our Process</a></li>
+      <li><a href="#why">Why Choose Us</a></li><li><a href="#industries">Industries</a></li>
+      <li><a href="#testimonials">Testimonials</a></li><li><a href="#quote">Get a Quote</a></li>
+    </ul></div>
+    <div class="fc"><h4>Contact</h4><ul>
+      <li><a href="tel:+919448844241">+91 94488 44241</a></li>
+      <li><a href="tel:+919986511325">+91 99865 11325</a></li>
+      <li><a href="mailto:nrenterprises2001@gmail.com">Email Us</a></li>
+      <li><a href="https://wa.me/919448844241" target="_blank">WhatsApp Us</a></li>
+      <li><a href="#quote">Request a Quote</a></li>
+    </ul>
+    <p style="font-size:.7rem;color:rgba(255,255,255,.26);margin-top:16px">Koramangala, Bangalore<br>Karnataka — 560034</p>
+    </div>
+  </div>
+  <div class="f-bot">
+    <p>&copy; 2026 NR Enterprises &amp; Solutions. All Rights Reserved. Crafted with precision in Bangalore, India.</p>
+    <p>25 Years · 500+ Clients · 12 Service Categories · Pan-India Delivery</p>
+  </div>
+</footer>
+
+<div class="floating">
+  <a href="https://wa.me/919448844241" class="fb-btn fb-wa shine" target="_blank" data-tip="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:+919448844241" class="fb-btn fb-call shine" data-tip="94488 44241"><i class="fas fa-phone-alt"></i></a>
+</div>
+<a href="#home" class="bk-top" id="bkTop"><i class="fas fa-arrow-up"></i></a>
+<!-- Page progress bar -->
+<div id="page-progress"></div>
+<!-- Cursor glow (desktop only) -->
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-glow-ring" id="cursorRing"></div>
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const hdr=document.getElementById('hdr'),bkTop=document.getElementById('bkTop');
+window.addEventListener('scroll',function(){
+  hdr.classList.toggle('stuck',window.scrollY>90);
+  bkTop.classList.toggle('show',window.scrollY>380);
+});
+
+// Dark/Light Mode
+const html=document.documentElement;
+const themeBtn=document.getElementById('themeBtn');
+const themeIco=document.getElementById('themeIco');
+function applyTheme(t){
+  html.setAttribute('data-theme',t);
+  themeIco.className=t==='dark'?'fas fa-sun':'fas fa-moon';
+  try{localStorage.setItem('nrTheme',t);}catch(e){}
+}
+var saved='light';
+try{saved=localStorage.getItem('nrTheme')||'light';}catch(e){}
+applyTheme(saved);
+themeBtn.addEventListener('click',function(){
+  applyTheme(html.getAttribute('data-theme')==='dark'?'light':'dark');
+});
+
+// Scroll Reveal
+var ro=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on');});
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv,.rl,.rr').forEach(function(el){ro.observe(el);});
+
+// Counters
+function animCount(el,target){
+  var n=0,steps=55,inc=target/steps,iv=1600/steps;
+  var t=setInterval(function(){
+    n+=inc;
+    if(n>=target){el.textContent=target+'+';clearInterval(t);}
+    else el.textContent=Math.ceil(n)+'+';
+  },iv);
+}
+setTimeout(function(){
+  document.querySelectorAll('.hc').forEach(function(el){animCount(el,parseInt(el.dataset.t));});
+},700);
+var so=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){var t=parseInt(e.target.dataset.t);if(t)animCount(e.target,t);so.unobserve(e.target);}
+  });
+},{threshold:0.5});
+document.querySelectorAll('.sc').forEach(function(el){so.observe(el);});
+
+// Hero form
+document.getElementById('hForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('hN').value,p=document.getElementById('hP').value,s=document.getElementById('hS').value,q=document.getElementById('hQ').value;
+  window.open('https://wa.me/919448844241?text='+encodeURIComponent(
+    'Hello NR Enterprises & Solutions,\n\n' +
+    'I am reaching out through your website to request a print quotation. Please find my details below:\n\n' +
+    '👤 *Name:* ' + n + '\n' +
+    '📞 *Phone:* ' + p + '\n' +
+    '🖨️ *Service Required:* ' + s + '\n' +
+    '📦 *Approximate Quantity:* ' + q + '\n\n' +
+    'Kindly share your best quote at the earliest convenience. Thank you.'
+  ),'_blank');
+});
+
+// Main form
+document.getElementById('mForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('mN').value,c=document.getElementById('mC').value,p=document.getElementById('mP').value,em=document.getElementById('mE').value,s=document.getElementById('mS').value,q=document.getElementById('mQ').value,d=document.getElementById('mD').value;
+  window.open('https://wa.me/919448844241?text='+encodeURIComponent(
+    'Hello NR Enterprises & Solutions,\n\n' +
+    'I came across your website and would like to submit a print project inquiry. Below are my project details:\n\n' +
+    '👤 *Full Name:* ' + n + '\n' +
+    '🏢 *Company / Organisation:* ' + c + '\n' +
+    '📞 *Mobile Number:* ' + p + '\n' +
+    '📧 *Email Address:* ' + em + '\n' +
+    '🖨️ *Service Category:* ' + s + '\n' +
+    '📦 *Approximate Quantity:* ' + q + '\n' +
+    '📋 *Technical Specifications:* ' + (d || 'To be discussed') + '\n\n' +
+    'I look forward to receiving a detailed quotation. Please feel free to contact me for any clarification.\n\n' +
+    'Thank you,\n' + n
+  ),'_blank');
+  showToast('✅ Opening WhatsApp — we reply within 2 hours!');
+// removed toast
+});
+
+// ===== PAGE PROGRESS BAR =====
+var prog=document.getElementById('page-progress');
+window.addEventListener('scroll',function(){
+  var pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+  if(prog) prog.style.width=pct+'%';
+});
+
+// ===== CUSTOM CURSOR GLOW (desktop) =====
+var cg=document.getElementById('cursorGlow'),cr=document.getElementById('cursorRing');
+if(window.innerWidth>768 && cg){
+  document.addEventListener('mousemove',function(e){
+    cg.style.left=e.clientX+'px'; cg.style.top=e.clientY+'px';
+    setTimeout(function(){cr.style.left=e.clientX+'px'; cr.style.top=e.clientY+'px';},60);
+  });
+  document.addEventListener('mousedown',function(){cg.style.transform='translate(-50%,-50%) scale(2.2)';});
+  document.addEventListener('mouseup',function(){cg.style.transform='translate(-50%,-50%) scale(1)';});
+}
+
+// ===== TOAST HELPER =====
+function showToast(msg){
+  var t=document.getElementById('toast');
+  if(!t) return;
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},3200);
+}
+
+// ===== LIVE PRINT COUNTER =====
+var liveEl=document.getElementById('livePrints');
+if(liveEl){
+  var base=Math.floor(Math.random()*2000)+4500;
+  liveEl.textContent=base.toLocaleString();
+  setInterval(function(){
+    base+=Math.floor(Math.random()*3)+1;
+    liveEl.textContent=base.toLocaleString();
+  },2800);
+}
+
+// ===== PARTICLE CANVAS =====
+(function(){
+  var canvas=document.getElementById('particles');
+  if(!canvas) return;
+  var ctx=canvas.getContext('2d');
+  var pts=[];
+  function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight;}
+  resize();
+  window.addEventListener('resize',resize);
+  for(var i=0;i<55;i++){
+    pts.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,
+      vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()*1.8+.4});
+  }
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pts.forEach(function(p){
+      p.x+=p.vx; p.y+=p.vy;
+      if(p.x<0||p.x>canvas.width) p.vx*=-1;
+      if(p.y<0||p.y>canvas.height) p.vy*=-1;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle='rgba(240,90,40,.5)';ctx.fill();
+    });
+    for(var i=0;i<pts.length;i++){
+      for(var j=i+1;j<pts.length;j++){
+        var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<110){
+          ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle='rgba(240,90,40,'+(0.12*(1-dist/110))+')';ctx.lineWidth=.7;ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+// ===== RIPPLE EFFECT ON BUTTONS =====
+document.querySelectorAll('.btn-fill,.btn-line,.wa-go,.wa-send,.nav-cta').forEach(function(btn){
+  btn.classList.add('ripple-container');
+  btn.addEventListener('click',function(e){
+    var r=document.createElement('span');
+    r.className='ripple';
+    var rect=btn.getBoundingClientRect();
+    var size=Math.max(rect.width,rect.height);
+    r.style.width=r.style.height=size+'px';
+    r.style.left=(e.clientX-rect.left-size/2)+'px';
+    r.style.top=(e.clientY-rect.top-size/2)+'px';
+    btn.appendChild(r);
+    setTimeout(function(){r.remove();},700);
+  });
+});
+
+// ===== TILT EFFECT ON CARDS =====
+document.querySelectorAll('.svc-card,.testi-card,.hcard,.ind-card').forEach(function(card){
+  card.classList.add('tilt-card');
+  card.addEventListener('mousemove',function(e){
+    var rect=card.getBoundingClientRect();
+    var x=e.clientX-rect.left,y=e.clientY-rect.top;
+    var cx=rect.width/2,cy=rect.height/2;
+    var rx=((y-cy)/cy)*6,ry=-((x-cx)/cx)*6;
+    card.style.transform='perspective(700px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-4px)';
+    card.style.boxShadow='0 18px 36px rgba(0,0,0,.22)';
+  });
+  card.addEventListener('mouseleave',function(){
+    card.style.transform='';card.style.boxShadow='';
+  });
+});
+
+// ===== TYPING EFFECT IN HERO TAG =====
+(function(){
+  var tags=['Industrial Printer','Printing Powerhouse','Your Print Partner','25 Years Strong'];
+  var el=document.querySelector('.hero-tag span');
+  if(!el) return;
+  el.innerHTML='Bangalore\'s Premier <span id="typeWord">Industrial Printer</span> — Est. 2001<span class="type-cursor"></span>';
+  var tw=document.getElementById('typeWord'); if(!tw) return;
+  var ti=0,ci=0,del=false;
+  function tick(){
+    var word=tags[ti];
+    if(!del){
+      tw.textContent=word.slice(0,ci+1); ci++;
+      if(ci===word.length){del=true;setTimeout(tick,1800);return;}
+    } else {
+      tw.textContent=word.slice(0,ci-1); ci--;
+      if(ci===0){del=false;ti=(ti+1)%tags.length;}
+    }
+    setTimeout(tick,del?60:95);
+  }
+  setTimeout(tick,2000);
+})();
+
+// ===== SHOW TOAST ON FIRST VISIT =====
+// Removed - not needed
+
+</script>
+</body>
+</html>
